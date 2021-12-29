@@ -1,0 +1,276 @@
+@import './variables.scss';
+
+.header {
+  max-width: 1600px;
+  margin: 0 auto 80px auto;
+  padding: 0 20px;
+
+  &-up {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+    margin-left: 160px;
+    padding-right: 19px;
+    padding-top: 15px;
+
+    &__list {
+      display: flex;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      gap: 24px;
+    }
+
+    &__link {
+      color: #fff;
+      font-size: 14px;
+      font-family: $font;
+      line-height: 28px;
+      font-weight: 400;
+      opacity: 0.8;
+      transition: color .3s;
+
+      &:hover {
+        color: rgb(185, 105, 105);
+      }
+    }
+
+    &__info {
+      display: flex;
+      align-items: center;
+      gap: 56px;
+    }
+
+    &__city {
+      display: flex;
+      align-items: center;
+      color: #fff;
+      font-size: 14px;
+      font-family: $font;
+      line-height: 28px;
+      font-weight: 400;
+      opacity: 0.8;
+      transition: color .3s;
+
+      &:hover {
+        color: rgb(185, 105, 105);
+      }
+
+      & > img {
+        margin-right: 8px;
+      }
+    }
+
+    &__phone {
+      display: flex;
+      align-items: center;
+      color: #fff;
+      font-size: 24px;
+      font-family: $font;
+      line-height: 24px;
+      font-weight: 500;
+
+      & > img {
+        margin-right: 16px;
+      }
+    }
+
+    &__account {
+      border-radius: 50%;
+      border: 2px solid #ACD5FE10;
+      box-sizing: border-box;
+      padding: 19px;
+      transition: border-color .3s;
+
+      &:hover {
+        border-color: rgb(185, 105, 105);
+      }
+    }
+  }
+
+  &-down {
+    display: flex;
+    align-items: center;
+    height: 105px;
+    border-top: 2px solid #b3bfcd12;
+    box-sizing: border-box;
+    padding-top: 20px;
+
+    &__content {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      box-sizing: border-box;
+      padding-right: 19px;
+    }
+    
+    &__brush {
+      margin-right: 30px;
+      fill: #fff;
+      transition: fill .3s;
+
+      &:hover {
+        fill: rgb(185, 105, 105);
+      }
+    }
+
+    &__busket {
+      fill: #fff;
+      transition: fill .3s;
+
+      &:hover {
+        fill: rgb(185, 105, 105);
+      }
+    }
+
+    &__list {
+      display: flex;
+      list-style-type: none;
+      margin: 0 0 0 56px;
+      padding: 0;
+      gap: 36px;
+    }
+
+    &__link {
+      color: #fff;
+      font-family: $font;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 40px;
+      transition: color .3s;
+
+      &:hover {
+        color: rgb(185, 105, 105);
+      }
+    }
+
+    &__logo {
+      padding-left: 24px;
+    }
+  }
+
+  &-hidden {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: 29px 37px 20px 37px;
+    margin-bottom: 22px;
+    position: relative;
+
+    &__burger {
+      & > svg {
+        fill: #fff;
+        transition: fill .3s;
+
+        &:hover {
+          fill: rgb(185, 105, 105);
+        }
+      }
+    }
+    
+    &__logo {
+      max-width: 44px;
+    }
+    
+    &__account {
+      fill: #fff;
+      transition: fill .3s;
+
+      &:hover {
+        fill: rgb(185, 105, 105);
+      }
+    }
+  }
+
+  @media screen and(max-width: 1440px) {
+    &-up {
+      &__phone {
+        font-size: 16px;
+
+        & > img {
+          max-width: 24px;
+        }
+      }
+
+      &__city {
+        font-size: 12px;
+      }
+
+      &__account {
+        max-width: 46px;
+        padding: 12px;
+      }
+
+      &__list {
+        gap: 14px;
+      }
+
+      &__link {
+        font-size: 12px;
+      }
+
+      &__info {
+        gap: 18px;
+      }
+    }
+  }
+
+  @media screen and(max-width: 1024px) {
+    &-up {
+      margin-left: 24px;
+
+      &__info {
+        gap: 14px;
+      }
+
+      &__phone {
+        font-size: 14px;
+      }
+
+      &__link {
+        font-size: 11px;
+      }
+
+      &__list {
+        flex-wrap: wrap;
+
+        & > li {
+          width: 30%;
+        }
+      }
+    }
+
+    &-down {
+      &__list {
+        margin-left: 24px;
+        gap: 24px;
+      }
+      
+      &__link {
+        font-size: 16px;
+      }
+
+      &__brush {
+        max-width: 30px;
+        margin-right: 12px;
+      }
+
+      &__busket {
+        max-width: 30px;
+      }
+
+      &__logo {
+        max-width: 75px;
+      }
+    }
+  }
+
+  @media screen and(max-width: 768px) {
+    display: none;
+
+    &-hidden {
+      display: flex;
+    }
+  }
+}

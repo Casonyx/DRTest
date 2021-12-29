@@ -1,0 +1,135 @@
+@import './variables.scss';
+
+.hero {
+  margin-bottom: 162px;
+  position: relative;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 0;
+    max-width: 100%;
+
+    & > span {
+      color: #fff;
+      font-family: $font;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 36px;
+      letter-spacing: 0.02em;
+      position: relative;
+      padding-top: 24px;
+      margin-bottom: 6px;
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 269px;
+        height: 3px;
+        background-color: #D43C38;
+        left: 0;
+        top: 0;
+        box-shadow: 0px 4px 4px rgba(212, 60, 56, 0.5);
+      }
+    }
+
+    & > h3 {
+      color: #fff;
+      font-family: $font;
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 36px;
+      letter-spacing: 0.02em;
+      margin: 0 0 72px 0;
+    }
+  }
+
+  &__title {
+    color: #fff;
+    font-family: $font;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 36px;
+    letter-spacing: 0.02em;
+    margin: 0 0 36px 0;
+  }
+  
+  &__cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 70px;
+  }
+
+  &__back {
+    position: absolute;
+    top: 0;
+    left: 9%;
+
+    & > svg {
+      fill: transparent;
+      stroke: #fff;
+      transition: stroke .3s;
+
+      &:hover {
+        stroke: rgb(185, 105, 105);
+      }
+    }
+  }
+
+  @media screen and(max-width: 1024px) {
+    &__back {
+      left: 4%;
+    }
+
+    &__content {
+      & > h3 {
+        font-size: 36px;
+      }
+
+      & > span {
+        font-size: 16px;
+
+        &::before {
+          width: 238px;
+        }
+      }
+    }
+
+    &__title {
+      font-size: 36px;
+    }
+
+    &__cards {
+      gap: 20px;
+    }
+  }
+
+  @media screen and(max-width: 768px) {
+    &__content {
+      & > h3 {
+        font-size: 24px;
+        text-align: center;
+      }
+
+      & > span {
+        text-align: center;
+      }
+    }
+
+    &__title {
+      font-size: 24px;
+      text-align: center;
+      margin-top: 4px;
+    }
+
+    &__back > svg {
+      max-width: 43px;
+    }
+
+    &__cards {
+      display: none;
+    }
+  }
+}

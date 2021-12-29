@@ -1,0 +1,129 @@
+@import './variables.scss';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 24px 24px 40px 24px;
+  max-width: 427px;
+  background-color: #0C1117;
+  border: 2px solid transparent;
+  filter: drop-shadow(0px 0px 8px rgba(212, 60, 56, 0.5));
+  cursor: pointer;
+  transition: border-color .3s;
+  width: 30%;
+
+  &:hover {
+    border-color: #D43C38;
+  }
+
+  &__img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    color: #fff;
+    font-family: $font;
+    font-weight: 900;
+    font-size: 26px;
+    letter-spacing: 0.06em;
+    margin: 0 0 12px 0;
+    text-align: center;
+  }
+
+  &__text {
+    color: #fff;
+    font-family: $font;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 17px;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    max-width: 221px;
+    width: 100%;
+    height: 68px;
+    color: #fff;
+    font-weight: 900;
+    font-family: $font;
+    font-size: 18px;
+    line-height: 22px;
+    background-color: #0C1117;
+    border: 1px solid #D43C38;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 0px 2px #D43C38);
+    margin-top: auto;
+    transition: color .3s;
+
+    &:hover {
+      color: rgb(185, 105, 105);
+    }
+  }
+
+  @media screen and(max-width: 1024px) {
+    padding: 18px 10px 22px 10px;
+
+    &__title {
+      font-size: 16px;
+    }
+
+    &__btn {
+      font-size: 14px;
+    }
+
+    &__text {
+      font-size: 12px;
+    }
+  }
+
+  @media screen and(max-width: 768px) {
+    width: 100%;
+    background-color: #020405;
+    margin: 10px;
+
+    &__text {
+      font-size: 10px;
+      margin-bottom: 17px;
+    }
+
+    &__title {
+      margin-bottom: 8px;
+    }
+
+    &__btn {
+      font-size: 10px;
+      max-width: 130px;
+      height: 40px;
+      & > img {
+        max-width: 22px;
+      }
+    }
+
+    &__img {
+      margin-bottom: 12px;
+    }
+
+    &__border {
+      border: 2px solid #D43C38;
+    }
+  }
+
+  @media screen and(max-width: 600px) {
+    width: 68%;
+  }
+
+  @media screen and(max-width: 375px) {
+    &__text {
+      font-size: 9px;
+    }
+  }
+}
